@@ -1,0 +1,23 @@
+.toolbar{
+    display: inline-block;
+}
+
+h5{
+    display: inline-block;
+    margin-top: 150px;
+}
+
+@media screen and (max-width: 580px) {
+    .toolbar, h5 {
+        display: block;
+    }
+
+    .inp{
+        height: 50px;
+    }
+
+    .form-outline{
+        width: 438px;
+        margin-left : -100px;
+    }
+}

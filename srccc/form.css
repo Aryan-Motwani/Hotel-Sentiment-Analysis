@@ -1,0 +1,27 @@
+.form-container{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-gap: 10px;
+}
+
+h1{
+  align-self: center;
+}
+
+input{
+  display: inline-block;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button.mb-4.w-100{
+  margin-top: 15px;
+}
+
+button:hover{
+  background: #005cb8 !important;
+}

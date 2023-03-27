@@ -1,0 +1,45 @@
+/* table{
+    font-size: 25px;
+    text-align: center;
+} */
+
+
+
+.thead th{
+    border: none !important;
+    cursor: pointer;
+}
+
+.home{
+    margin: 30px;
+}
+
+h1{
+    text-align: center;
+}
+
+.filters{
+    display: flex;
+    cursor: pointer;
+    background-color: #4f4f4f;
+    color: white;
+    border-radius: 10px;
+    height: 100px;
+    padding: 24px;
+    padding-left: 41px;
+}
+
+.filter{
+    margin: 10px;
+    background: gray;
+    height: 40px;
+    width: 80px;
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+    border-radius: 20px;
+}
+
+td{
+    cursor: pointer;
+}

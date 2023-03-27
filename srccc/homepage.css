@@ -1,0 +1,24 @@
+.rect{
+    margin: 10px;
+    color: white;
+    display: flex;
+    cursor: pointer;
+}
+
+.one{
+    height: 150px;
+    border-radius: 10px 0px 0px 10px;
+    width: 150px;
+    
+    /* margin: 2px; */
+}
+.two{
+    border-radius: 0px 10px 10px 0px;
+    height: 150px;
+    width: 250px;
+}
+
+.main{
+    display: flex;
+    margin-left: 10%;
+}

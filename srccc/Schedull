@@ -1,0 +1,72 @@
+import { MDBContainer, MDBInput } from 'mdb-react-ui-kit'
+import React, { Component, useState } from 'react'
+import { app } from "./firebase";
+import './firebase'
+import {db} from './firebase'
+import { Button } from 'react-bootstrap';
+import uuid from 'react-uuid';
+import { components } from 'react-select';
+
+export default class Employee extends Component{
+    constructor(props){
+        this.state = {fileUrl : null, emps : [], users : []};
+    }
+    // const [fileUrl, setFileUrl] = React.useState(null);
+    // const [emps,setEmps] = useState([]);
+    // const [users, setUsers] = useState([]);
+
+  onSubmit = async () => {
+    db.collection("emp_images").doc("username"+uuid()).set({
+      name: "username",
+      avatar: this.state.fileUrl,
+    });
+  };
+
+  onFileChange = async (e) => {
+    const file = e.target.files[0];
+    const storageRef = app.storage().ref();
+    const fileRef = storageRef.child(uuid());
+    await fileRef.put(file);
+    this.setState({fileUrl : await fileRef.getDownloadURL()});
+  };
+
+  handleSubmit = () => {
+      let data = {}
+      this.onSubmit()
+          document.querySelectorAll('.form1').forEach(i => {
+              if(i.type == "file"){
+                data["Profile"] = this.state.fileUrl;
+            }else{
+                data[i.parentElement.textContent] = i.value;
+            }
+        })
+        let empObj = {data : data, field : "Master/Employee", id : "emp"+uuid()};
+        db.collection("mess").doc(empObj.id).set(empObj);
+    
+  }
+
+  render(){
+
+      return (
+          <div>
+    <MDBContainer className="p-3 my-5 d-flex flex-column w-50">
+        <h1>Employee</h1>
+        <p></p>
+        <MDBInput className='form1' wrapperClass='mb-4' min="0" label='Empolyee Name' type="text"></MDBInput>
+        <MDBInput className='form1' wrapperClass='mb-4' min="0" label='Mobile Number' type="number"></MDBInput>
+        <MDBInput className='form1' wrapperClass='mb-4' min="0" label='Email Id' type="mail"></MDBInput>
+        <MDBInput className='form1' wrapperClass='mb-4' min="0" label='Address' type="text"></MDBInput>
+        <MDBInput className='form1' wrapperClass='mb-4' min="0" label='Aadhar Number' type="number"></MDBInput>
+        <MDBInput className='form1' wrapperClass='mb-4' min="0" label='Pan Number' type="number"></MDBInput>
+        <p></p>
+        <label>Profile : </label>
+        <input label="Profile" className='form1' type="file" onChange={this.onFileChange} />
+        <p></p>
+        <MDBInput className='form1' wrapperClass='mb-4' min="0" label='Password' type="password"></MDBInput>
+        <p></p>
+        <Button onClick={this.handleSubmit}>Submit</Button>
+    </MDBContainer>
+    </div>
+  )
+}
+}

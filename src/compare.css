@@ -1,0 +1,72 @@
+.self-chart:nth-child(1){
+    margin-top: 1px;
+}
+
+.self-chart{
+    height: 310px;
+    width: 380px;
+    background: white;
+    border: 2px solid black;
+    margin: 55px;
+    margin-left: 205px;
+    text-align: center;
+    padding-top: 60px;
+    display: flex;
+}
+
+.rects{
+    margin-left: -60px;
+}
+
+.names{
+    margin-left: 30px;
+    margin-top: -20px;
+
+}
+
+.names p{
+    margin-top: 48px;
+}
+
+.self-rect{
+    height: 50px;
+    width: 155px;
+    background: red;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.dropdowns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 280px;
+    margin: 50px;
+}
+
+.btn{
+    margin-left: 50px;
+    background-color: #4492ff !important;
+    color: white !important;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.chart-pic{
+    margin-top: 30px;
+    display: flex;
+    /* gap: 50px; */
+}
+
+.chartt{
+    border: 2px solid black;
+    padding: 20px;
+    margin-left: 31%;
+    
+}
+
+.hotel-1,.hotel-2{
+    text-align: center;
+}

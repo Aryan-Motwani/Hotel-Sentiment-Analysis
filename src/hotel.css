@@ -1,0 +1,134 @@
+.btnn{
+
+}
+
+.wordcloud{
+    text-align: center;
+    margin: 20px;
+}
+
+.wordcloud img{
+    margin: 20px;
+}
+
+h3{
+    font-size: 35px !important;
+}
+
+tr:nth-child(even){
+    background: #f3f3f3;
+}
+tr:nth-child(odd){
+    background: #e2e2e2;
+}
+
+thead tr{
+    background: #f3f3f3 !important;
+}
+
+
+.chart{
+    border: 2px solid black;
+    padding: 20px;
+}
+
+table{
+    font-size: 25px !important;
+    text-align: center;
+}
+
+td,th{
+    /* padding-left: 80px !important; */
+}
+
+/* td,th{
+    border: 2px solid black !important;
+} */
+
+.home{
+    /* text-align: center; */
+}
+
+.first{
+    padding-right: 40px;
+}
+
+table{
+    font-size: 20px;
+}
+
+.hotel-page-table td, th{
+    border: 2px solid black !important;
+    padding: 30px;
+}
+
+
+.mainn{
+    /* background-color: #333; */
+}
+
+.box{
+    display: flex;
+    font-size: 20px;
+}
+
+.box > h5 {
+    margin-right: 10%;
+}
+
+.heading{
+    display:flex;
+    /* gap : 650px; */
+}
+
+.chart-pic{
+    margin-top: 30px;
+    display: flex;
+    /* gap: 50px; */
+}
+
+
+.chart{
+    /* height: 330px; */
+    /* width: 800px; */
+    /* background: #333; */
+}
+
+.imgs{
+    margin-left: 50px;
+    display: flex;
+    gap: 50px;
+    /* border: 2px solid black; */
+    /* padding: 2px; */
+}
+
+.prm-img{
+    height: 330px;
+    width: 500px;
+}
+
+.sec-img{
+    height: 163px;
+    width: 220px;
+    margin-bottom: 5px;
+    margin-left: -45px;
+}
+
+
+.main-content{
+    margin-top: 50px;
+    /* border: 2px solid gray; */
+    padding: 30px 50px;
+    /* background: #ededed; */
+}
+
+.lists{
+    margin-top: 25px;
+    display: flex;
+    gap : 300px;
+}
+
+.main-content > h3 {
+    margin: 0 40%;
+    margin-bottom: 50px;
+}
